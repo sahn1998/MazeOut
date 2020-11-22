@@ -13,6 +13,8 @@ CSE 143 Maze Solving Algorithm + Visualization Project
 
 --- Insert Project Details in the README Here ---
 
+This project was bootstrapped with Create React App (https://github.com/facebook/create-react-app). See package.json for dependency details.
+
 <br>
 
 ## Project Code Base
