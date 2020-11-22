@@ -25,7 +25,7 @@ cd maze-out/client/src/components
 <br>
 
 ## Project Code Base
-**Front-End:** ReactJS
+**ReactJS**
 
 <br>
 
