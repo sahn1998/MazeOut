@@ -17,6 +17,13 @@ This project was bootstrapped with Create React App (https://github.com/facebook
 
 <br>
 
+To look at the code components
+```
+cd maze-out/client/src/components
+```
+
+<br>
+
 ## Project Code Base
 **Front-End:** ReactJS
 
