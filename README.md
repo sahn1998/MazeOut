@@ -1,18 +1,24 @@
 # MazeOut
 CSE 143 Maze Solving Algorithm + Visualization Project
 
-<br></br>
+<br>
 
 ## The Project Members
 * [**Sung Hyun Ahn**](https://github.com/sahn1998)
 * [**Jenny HyeonJeong Lee**](https://github.com/jhjlee0329)
 
+<br>
+
 ## Project Details
 
 --- Insert Project Details in the README Here ---
 
+<br>
+
 ## Project Code Base
 **Front-End:** ReactJS
+
+<br>
 
 ## Setup
 Make sure to install NodeJS.
