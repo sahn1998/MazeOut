@@ -1,0 +1,16 @@
+.config-game {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.maze-size-input {
+    display: flex;
+    justify-content: center;
+}
+
+.button-input {
+    display: flex;
+    justify-content: center;
+}

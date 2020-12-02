@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.1.10",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
+    "react-css-grid": "^2.0.0-0",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
@@ -39,6 +40,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
