@@ -64,6 +64,12 @@ export class Maze extends React.Component {
      * Method: 
      * Sets the tile to the correct corresponding tile that the client wishes
      * Clients can set Starting Point, End Point, Walls.
+     * 
+     * Starting Point has a label "o"
+     * End Point has a label "x"
+     * Walls have a label "#"
+     * Paths have a label "+"
+     * 
      * @param {*} row 
      * @param {*} col 
      */
@@ -132,13 +138,31 @@ export class Maze extends React.Component {
             return (
                 <tr>
                     {row.map((col, j) => {
-
+                        /**
+                         * Tile Color에서 사용되는 '?'는 Conditional operator이라고 해... 그냥 그건
+                         * If and else statement이라고 보면 돼
+                         * 
+                         * 아래를 if and else statement으로 생각하면
+                         * 
+                         * tileColor = 
+                         * if (mazeGrid[i][j] === "+") {
+                         *  '#000000'
+                         * } else if (mazeGrid[i][j] === "o") {
+                         *  '#4CAF50
+                         * }
+                         * 
+                         * Starting Point has a color "Green" ( '#4CAF50' )
+                         * End Point has a color "Red" ( '#f44336' )
+                         * Walls have a color "White" ( '#000000' )
+                         * Paths have a color "Black" ( '#FFFFFF' )
+                         * Visited Paths should have a color "Blue" ( '#008CBA' )
+                         */
                         const tileColor = 
                         mazeGrid[i][j] === '+' ? '#000000' 
                         : mazeGrid[i][j] === 'o' ? '#4CAF50'
                         : mazeGrid[i][j] === 'x' ? '#f44336'
                         : mazeGrid[i][j] === '#' ? '#FFFFFF'
-                        : 'red';
+                        : '#008CBA';
 
                         return (
                             <Tile
@@ -162,6 +186,22 @@ export class Maze extends React.Component {
         )
     }
 
+    /**
+     * Method: Runs the program to solve the maze
+     * Each tile visited should have a "v" label
+     * At each point, you should check the next point to see if the path is viable.
+     * Visited tiles should have a different color value of red
+     * Use algorithms to go through the tiles until the end point is reached
+     * Should return a "solved" if the maze gets solved
+     * Should return a "no solution" if there is no way to get from starting point to the end point
+     * 
+     * Currently:
+     * Starting Point has a label "o"
+     * End Point has a label "x"
+     * Walls have a label "#"
+     * Paths have a label "+"
+     * 
+     */
     runProgram = () => {
 
     }
