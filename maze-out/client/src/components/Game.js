@@ -1,43 +1,52 @@
-import { TextField, Button } from '@material-ui/core';
+import { Button, Slider } from '@material-ui/core';
 import React from 'react';
 import { Maze } from './Maze';
 import "./Game.css";
 
 
 export class Game extends React.Component {
+    // The State of the Game Class
     state = {
-        rows: 0,
-        cols: 0,
+        boardSize: 20,
         startGame: false,
     }
 
+    // 
     GameStart() {
         return (
             <div>
-                <Maze
-                    rows={parseInt(this.state.rows, 10)}
-                    cols={parseInt(this.state.cols, 10)} 
-                />
+                <Maze boardSize={this.state.boardSize} />
             </div>
         )
     }
 
     SetMazeSize() {
+
         return (
             <div className="config-game">
                 <h2>Set the size of the maze to solve</h2>
                 <div className="maze-size-input">
-                    <TextField
-                        label="Rows"
-                        value={this.state.rows}
-                        onChange={event => this.setState({rows: event.target.value})}
+                    <Slider 
+                        min={0}
+                        max={40}
+                        defaultValue={20}
+                        valueLabelDisplay="on"
+                        style={{ 
+                            width: '500px',
+                            color: '#3a8589',
+                        }}
+                        onChange={this.handleState}
                     />
-                    <TextField
-                        label="Columns"
-                        value={this.state.cols}
-                        onChange={event => this.setState({cols: event.target.value})}
-                    />
-                    <Button onClick={this.PlayGameClick}>
+                </div>
+                <div className="button-input">
+                    <Button 
+                        onClick={this.PlayGameClick}
+                        style={{
+                            width: '500px',
+                            color: "#fff",
+                            backgroundColor: "#000",
+                        }}
+                    >
                         Solve the Maze!
                     </Button>
                 </div>
@@ -45,9 +54,15 @@ export class Game extends React.Component {
         )
     }
 
+    handleState = (event, value) => {
+        this.setState({
+            boardSize: value
+        })
+    }
+
     PlayGameClick = () => {
-        console.log(this.state);
-        if (this.state.rows > 0 && this.state.cols > 0) {
+        console.log(this.state.boardSize);
+        if (this.state.boardSize > 0) {
             this.setState({startGame: true});
         }
     }
