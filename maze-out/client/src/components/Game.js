@@ -61,7 +61,6 @@ export class Game extends React.Component {
     }
 
     PlayGameClick = () => {
-        console.log(this.state.boardSize);
         if (this.state.boardSize > 0) {
             this.setState({startGame: true});
         }
