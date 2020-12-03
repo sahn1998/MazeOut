@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from '@material-ui/core';
+import { Button, Modal } from '@material-ui/core';
 import { Tile } from "./Tile";
 import "./Maze.css";
 
@@ -8,11 +8,14 @@ export class Maze extends React.Component {
     state = {
         // Creating a 2D Matrix for creating a maze grid.
         maze: new Array(this.props.boardSize).fill('+').map(x => (new Array(this.props.boardSize).fill('+'))),
+        directions: [[-1,0], [1,0], [0,1], [0,-1]],
         startPoint: false,
         endPoint: false,
         wallPoint: false,
         startCoord: null,
         endCoord: null,
+        openModal: false,
+        announcementMessage: "",
     }
 
     /**
@@ -82,12 +85,14 @@ export class Maze extends React.Component {
                 this.setState({
                     maze: currentGrid,
                     startCoord: [row, col],
+                    startPoint: false,
                 });
             } else if (this.state.endPoint && !this.state.endCoord) {
                 currentGrid[row][col] = "x";
                 this.setState({
                     maze: currentGrid,
                     endCoord: [row, col],
+                    endPoint: false,
                 });
             } else if (this.state.wallPoint) {
                 currentGrid[row][col] = "#";
@@ -204,7 +209,19 @@ export class Maze extends React.Component {
      * 이게 어디 들어가야 하는지 나도 알아봐야 하는데 너도 한번 계속 해봐
      */
     runProgram = (x, y) => {
+        /* 이건 그냥 버튼 테스팅
+        this.setState({
+            openModal: true,
+            announcementMessage: "Running Program"
+        });
+        */
+    }
 
+    error = () => {
+        this.setState({
+            openModal: true,
+            announcementMessage: "Starting or End Point has not been set"
+        });
     }
 
     render() {
@@ -230,13 +247,29 @@ export class Maze extends React.Component {
                         Click and Set Walls
                     </Button>
                     <Button
-                        onClick={this.runProgram}
+                        onClick={
+                            (
+                                this.state.startCoord !== null && 
+                                this.state.endCoord != null
+                            ) ? 
+                            () => {this.runProgram(this.state.startCoord[0], this.state.startCoord[1])}
+                            : this.error
+                        }
                         className="run-program-button"
                     >
                         Run Program
                     </Button>
                 </div>
                 {this.createMaze()}
+                <Modal
+                    open={this.state.openModal}
+                    onClose={() => this.setState({openModal: false})}
+                    className="alert-modal"
+                >
+                    <div className="alert-modal-message">
+                        {this.state.announcementMessage}
+                    </div>
+                </Modal>
             </div>
         )
     }

@@ -3,6 +3,23 @@
     justify-content: center;
 }
 
+.alert-modal {
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.alert-modal-message {
+	display: flex;
+	background-color: black;
+	height: 25%;
+	width: 25%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+} 
+
 .starting-point-button {
 	box-shadow:inset 0px 1px 0px 0px #dcecfb;
 	background:linear-gradient(to bottom, #abfcca 5%, #52a111 100%);
