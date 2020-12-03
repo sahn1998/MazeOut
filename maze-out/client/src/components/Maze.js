@@ -50,7 +50,7 @@ export class Maze extends React.Component {
      */
     allowWallsClick = () => {
         if (!this.state.wallPoint) {
-            this.setState({
+            this.setState({ 
                 wallPoint: true,
                 startPoint: false,
                 endPoint: false,
@@ -201,8 +201,9 @@ export class Maze extends React.Component {
      * Walls have a label "#"
      * Paths have a label "+"
      * 
+     * 이게 어디 들어가야 하는지 나도 알아봐야 하는데 너도 한번 계속 해봐
      */
-    runProgram = () => {
+    runProgram = (x, y) => {
 
     }
 
