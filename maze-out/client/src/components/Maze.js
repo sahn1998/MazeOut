@@ -204,6 +204,10 @@ export class Maze extends React.Component {
      * 이게 어디 들어가야 하는지 나도 알아봐야 하는데 너도 한번 계속 해봐
      */
     runProgram = (x, y) => {
+        console.log('hello')
+    }
+
+    error = () => {
 
     }
 
@@ -230,7 +234,11 @@ export class Maze extends React.Component {
                         Click and Set Walls
                     </Button>
                     <Button
-                        onClick={this.runProgram}
+                        onClick={
+                            this.state.startCoord ? 
+                            this.runProgram(this.state.startCoord[0], this.state.startCoord[1])
+                            : this.error
+                        }
                         className="run-program-button"
                     >
                         Run Program
