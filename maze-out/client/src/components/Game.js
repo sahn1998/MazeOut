@@ -30,7 +30,10 @@ export class Game extends React.Component {
     SetMazeSize() {
         return (
             <div className="config-game">
-                <h2>Set the size of the maze to solve</h2>
+                <h1>Maze Out</h1>
+                <h2>By: Sung Hyun Ahn and Jenny HyeonJeong Lee</h2>
+                <h4>Set the size of the maze to solve</h4>
+                <h2> </h2>
                 <div className="maze-size-input">
                     <Slider 
                         min={0}

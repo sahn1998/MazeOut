@@ -233,7 +233,6 @@ export class Maze extends React.Component {
     }
 
     runProgram = (x, y) => {
-
        const mazeGrid = this.state.maze;
        this.solveMazeAlgo(mazeGrid, x, y);
     }
@@ -243,6 +242,14 @@ export class Maze extends React.Component {
             openModal: true,
             announcementMessage: "Starting or End Point has not been set"
         });
+    }
+
+    resetMaze = () => {
+        this.setState({
+            maze: new Array(this.props.boardSize).fill('+').map(x => (new Array(this.props.boardSize).fill('+'))),
+            startCoord: null,
+            endCoord: null,
+        })
     }
 
     render() {
@@ -282,6 +289,12 @@ export class Maze extends React.Component {
                         className="run-program-button"
                     >
                         Run Program
+                    </Button>
+                    <Button
+                        onClick={this.resetMaze}
+                        className="reset-button"
+                    >
+                        Reset Maze
                     </Button>
                 </div>
                 {this.createMaze()}

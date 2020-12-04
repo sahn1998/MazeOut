@@ -37,7 +37,7 @@
 	text-shadow:0px 1px 0px #528ecc;
 }
 .starting-point-button:hover {
-	background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+	background:linear-gradient(to bottom, #52a111 5%, #abfcca 100%);
 	background-color:#80b5ea;
 }
 .starting-point-button:active {
@@ -120,4 +120,26 @@
 	top:1px;
 }
 
-        
+.reset-button {
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background:linear-gradient(to bottom, #a433ef 5%, #8501d2 100%);
+	background-color:#b333ef;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+}
+.reset-button:hover {
+	background:linear-gradient(to bottom, #8501d2 5%, #a433ef 100%);
+	background-color:#019ad2;
+}
+.reset-button:active {
+	position:relative;
+	top:1px;
+}
