@@ -5,13 +5,17 @@ import "./Game.css";
 
 
 export class Game extends React.Component {
-    // The State of the Game Class
+    /**
+     * The State of the Game Class
+     */
     state = {
         boardSize: 20,
         startGame: false,
     }
 
-    // 
+    /**
+     * Method: Starts the game by creating the Maze Board
+     */
     GameStart() {
         return (
             <div>
@@ -20,8 +24,10 @@ export class Game extends React.Component {
         )
     }
 
+    /**
+     * Method: Sets the size of the Maze Board
+     */
     SetMazeSize() {
-
         return (
             <div className="config-game">
                 <h2>Set the size of the maze to solve</h2>
@@ -54,12 +60,19 @@ export class Game extends React.Component {
         )
     }
 
+    /**
+     * Method: Helper method to set the value of the boardSize
+     * @param {size of the board} value 
+     */
     handleState = (event, value) => {
         this.setState({
             boardSize: value
         })
     }
 
+    /**
+     * Method: Sets state of startGame to true for Game to Start.
+     */
     PlayGameClick = () => {
         if (this.state.boardSize > 0) {
             this.setState({startGame: true});

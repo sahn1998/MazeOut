@@ -5,6 +5,9 @@ import "./Maze.css";
 
 export class Maze extends React.Component {
 
+    /**
+     * State of the Maze Class
+     */
     state = {
         // Creating a 2D Matrix for creating a maze grid.
         maze: new Array(this.props.boardSize).fill('+').map(x => (new Array(this.props.boardSize).fill('+'))),
@@ -121,6 +124,56 @@ export class Maze extends React.Component {
     }
 
     /**
+     * Algorithm to solve the maze.
+     * Method: Runs the program to solve the maze
+     * Each tile visited should have a "v" label
+     * At each point, the program checks the next point to see if the path is viable.
+     * 
+     * @param {row} x 
+     * @param {col} y 
+     */
+    solveMazeAlgo(mazeGrid, x, y) {
+        const boardSize = this.props.boardSize;
+        let solved = false;
+
+        if (mazeGrid[x][y] === "x") {
+            return true;
+        }
+
+        if (mazeGrid[x][y] === "+") {
+            mazeGrid[x][y] = "v";
+            this.setState({
+                maze: mazeGrid
+            })
+        }
+
+        // directions: [[-1,0], [1,0], [0,1], [0,-1]],
+        for (let [moveX, moveY] of this.state.directions) {
+            const new_x = x + moveX;
+            const new_y = y + moveY;
+
+            // checking boundaries
+            if (
+                0 <= new_x &&
+                new_x < boardSize &&
+                0 <= new_y &&
+                new_y < boardSize &&
+                solved === false
+            ) {
+                if (
+                    mazeGrid[new_x][new_y] !== "#" && 
+                    mazeGrid[new_x][new_y] !== "o" && 
+                    mazeGrid[new_x][new_y] !== "v"
+                ) {
+                    solved = this.solveMazeAlgo(mazeGrid, new_x, new_y);
+                }
+            }
+        }
+
+        return solved;
+    }
+
+    /**
      * Method: 
      * Returns a (boardSize x boardSize) maze grid
      * boardSize is set by the client in the Set Maze Size menu.
@@ -144,18 +197,6 @@ export class Maze extends React.Component {
                 <tr>
                     {row.map((col, j) => {
                         /**
-                         * Tile Color에서 사용되는 '?'는 Conditional operator이라고 해... 그냥 그건
-                         * If and else statement이라고 보면 돼
-                         * 
-                         * 아래를 if and else statement으로 생각하면
-                         * 
-                         * tileColor = 
-                         * if (mazeGrid[i][j] === "+") {
-                         *  '#000000'
-                         * } else if (mazeGrid[i][j] === "o") {
-                         *  '#4CAF50
-                         * }
-                         * 
                          * Starting Point has a color "Green" ( '#4CAF50' )
                          * End Point has a color "Red" ( '#f44336' )
                          * Walls have a color "White" ( '#000000' )
@@ -191,30 +232,10 @@ export class Maze extends React.Component {
         )
     }
 
-    /**
-     * Method: Runs the program to solve the maze
-     * Each tile visited should have a "v" label
-     * At each point, you should check the next point to see if the path is viable.
-     * Visited tiles should have a different color value of red
-     * Use algorithms to go through the tiles until the end point is reached
-     * Should return a "solved" if the maze gets solved
-     * Should return a "no solution" if there is no way to get from starting point to the end point
-     * 
-     * Currently:
-     * Starting Point has a label "o"
-     * End Point has a label "x"
-     * Walls have a label "#"
-     * Paths have a label "+"
-     * 
-     * 이게 어디 들어가야 하는지 나도 알아봐야 하는데 너도 한번 계속 해봐
-     */
     runProgram = (x, y) => {
-        /* 이건 그냥 버튼 테스팅
-        this.setState({
-            openModal: true,
-            announcementMessage: "Running Program"
-        });
-        */
+
+       const mazeGrid = this.state.maze;
+       this.solveMazeAlgo(mazeGrid, x, y);
     }
 
     error = () => {
@@ -250,9 +271,12 @@ export class Maze extends React.Component {
                         onClick={
                             (
                                 this.state.startCoord !== null && 
-                                this.state.endCoord != null
+                                this.state.endCoord !== null
                             ) ? 
-                            () => {this.runProgram(this.state.startCoord[0], this.state.startCoord[1])}
+                            () => {this.runProgram(
+                                this.state.startCoord[0],
+                                this.state.startCoord[1]
+                            )}
                             : this.error
                         }
                         className="run-program-button"
