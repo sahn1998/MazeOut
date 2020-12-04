@@ -1,5 +1,5 @@
 # MazeOut
-CSE 143 Maze Solving Algorithm + Visualization Project
+A Maze Solving Project
 
 <br>
 
@@ -11,7 +11,15 @@ CSE 143 Maze Solving Algorithm + Visualization Project
 
 ## Project Details
 
---- Insert Project Details in the README Here ---
+<p>
+This project is a ReactJS based web-application that visualizes a maze-solving algorithm.
+It will allow users to set a starting point of the maze as well as an end point.
+Users can also set up walls that the recursive backtracking algorithm will have to navigate around.
+The recursive backtracking algorithm will start from the starting point and visualize a path it took to get to the end point.
+We are using ReactJS, a front-end Javascript library to handle the front-end visualization and server-side algorithm calculations.
+</p>
+
+<br>
 
 This project was bootstrapped with Create React App (https://github.com/facebook/create-react-app). See package.json for dependency details.
 
@@ -25,7 +33,7 @@ cd maze-out/client/src/components
 <br>
 
 ## Project Code Base
-**ReactJS**
+**ReactJS/JavaScript**
 
 <br>
 
@@ -34,16 +42,28 @@ Make sure to install NodeJS.
 
 <br>
 
-To install the required packages for the program, navigate to the 'client' directory and run:
+To install the required packages for the program, navigate to the 'client' directory:
+```
+cd maze-out/client/
+```
 
+<br> 
+
+and run:
 ```
 npm install
 ```
 
 <br>
 
-To start the client application, navigate to the 'client' directory and run:
+To start the client application, navigate to the 'client' directory:
+```
+cd maze-out/client/
+```
 
+<br>
+
+and run:
 ```
 npm start
 ```
@@ -51,4 +71,4 @@ npm start
 <br> 
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
+Initial load will take a few minutes and the page will reload if you make edits.
