@@ -16,6 +16,8 @@ A Maze Solving Project
 <p>Our project will use recursive backtracking to solve the maze from the starting point to the end point while avoiding walls.</p>
 <p>We are using ReactJS, a front-end Javascript library to handle the front-end visualization and server-side algorithm calculations</p>
 
+<br>
+
 This project was bootstrapped with Create React App (https://github.com/facebook/create-react-app). See package.json for dependency details.
 
 <br>
