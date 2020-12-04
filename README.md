@@ -30,7 +30,7 @@ Button Styling was generated using a Button CSS Generator. (https://www.bestcssb
 
 <br>
 
-To look at the code components
+To look at the code components, navigate to the 'components' directory:
 ```
 cd maze-out/client/src/components
 ```
