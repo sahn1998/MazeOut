@@ -11,10 +11,10 @@ A Maze Solving Project
 
 ## Project Details
 
-<p>This project is a ReactJS based web-application that visualizes a maze-solving algorithm.</p>
-<p>There will be a starting point, end point, and walls of the user’s choice.</p>
-<p>Our project will use recursive backtracking to solve the maze from the starting point to the end point while avoiding walls.</p>
-<p>We are using ReactJS, a front-end Javascript library to handle the front-end visualization and server-side algorithm calculations</p>
+<p>This project is a ReactJS based web-application that visualizes a maze-solving algorithm.
+There will be a starting point, end point, and walls of the user’s choice.
+Our project will use recursive backtracking to solve the maze from the starting point to the end point while avoiding walls.
+We are using ReactJS, a front-end Javascript library to handle the front-end visualization and server-side algorithm calculations</p>
 
 <br>
 
