@@ -11,10 +11,13 @@ A Maze Solving Project
 
 ## Project Details
 
-<p>This project is a ReactJS based web-application that visualizes a maze-solving algorithm.
-There will be a starting point, end point, and walls of the user’s choice.
-Our project will use recursive backtracking to solve the maze from the starting point to the end point while avoiding walls.
-We are using ReactJS, a front-end Javascript library to handle the front-end visualization and server-side algorithm calculations</p>
+<p>
+This project is a ReactJS based web-application that visualizes a maze-solving algorithm.
+It will allow users to set a starting point of the maze as well as an end point.
+Users can also set up walls that the recursive backtracking algorithm will have to navigate around.
+The recursive backtracking algorithm will start from the starting point and visualize a path it took to get to the end point.
+We are using ReactJS, a front-end Javascript library to handle the front-end visualization and server-side algorithm calculations.
+</p>
 
 <br>
 
@@ -30,7 +33,7 @@ cd maze-out/client/src/components
 <br>
 
 ## Project Code Base
-**ReactJS**
+**ReactJS/JavaScript**
 
 <br>
 
@@ -39,16 +42,28 @@ Make sure to install NodeJS.
 
 <br>
 
-To install the required packages for the program, navigate to the 'client' directory and run:
+To install the required packages for the program, navigate to the 'client' directory:
+```
+cd maze-out/client/
+```
 
+<br> 
+
+and run:
 ```
 npm install
 ```
 
 <br>
 
-To start the client application, navigate to the 'client' directory and run:
+To start the client application, navigate to the 'client' directory:
+```
+cd maze-out/client/
+```
 
+<br>
+
+and run:
 ```
 npm start
 ```
@@ -56,4 +71,4 @@ npm start
 <br> 
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
+Initial load will take a few minutes and the page will reload if you make edits.
