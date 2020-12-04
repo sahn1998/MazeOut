@@ -39,6 +39,7 @@ cd maze-out/client/src/components
 
 ## Setup
 Make sure to install NodeJS.
+We would also suggest using Visual Studio Code IDE, but not required.
 
 <br>
 
