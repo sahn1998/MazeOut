@@ -22,7 +22,9 @@ We are using ReactJS, a front-end Javascript library to handle the front-end vis
 <br>
 
 This project was bootstrapped with Create React App (https://github.com/facebook/create-react-app). See package.json for dependency details.
+<p>
 Material UI, a React UI framework was used to import button and slider features. (https://material-ui.com/)
+<p>
 Button Styling was generated using a Button CSS Generator. (https://www.bestcssbuttongenerator.com/)
 
 <br>
