@@ -26,6 +26,7 @@ This project was bootstrapped with Create React App (https://github.com/facebook
 Material UI, a React UI framework was used to import button and slider features. (https://material-ui.com/)
 <p>
 Button Styling was generated using a Button CSS Generator. (https://www.bestcssbuttongenerator.com/)
+</p>
 
 <br>
 
