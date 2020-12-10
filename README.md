@@ -9,6 +9,11 @@ A Maze Solving Project
 
 <br>
 
+## Project Demo
+[Maze Out](https://youtu.be/zzc4Anhp_Y0)
+
+<br>
+
 ## Project Details
 
 <p>
