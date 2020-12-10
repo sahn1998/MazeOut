@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Modal } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import { Tile } from "./Tile";
 import "./Maze.css";
 
@@ -234,14 +234,15 @@ export class Maze extends React.Component {
 
     runProgram = (x, y) => {
        const mazeGrid = this.state.maze;
-       this.solveMazeAlgo(mazeGrid, x, y);
+       let solved = false;
+       solved = this.solveMazeAlgo(mazeGrid, x, y);
+       if (solved !== true) {
+           alert("The Maze can't be solved");
+       }
     }
 
     error = () => {
-        this.setState({
-            openModal: true,
-            announcementMessage: "Starting or End Point has not been set"
-        });
+        alert("Starting or End Point has not been set")
     }
 
     resetMaze = () => {
@@ -298,15 +299,6 @@ export class Maze extends React.Component {
                     </Button>
                 </div>
                 {this.createMaze()}
-                <Modal
-                    open={this.state.openModal}
-                    onClose={() => this.setState({openModal: false})}
-                    className="alert-modal"
-                >
-                    <div className="alert-modal-message">
-                        {this.state.announcementMessage}
-                    </div>
-                </Modal>
             </div>
         )
     }
