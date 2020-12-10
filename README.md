@@ -10,7 +10,7 @@
 <br>
 
 ## Project Demo
-[Maze Out](https://youtu.be/zzc4Anhp_Y0)
+[Maze Out Demo Video](https://youtu.be/zzc4Anhp_Y0)
 
 <br>
 
