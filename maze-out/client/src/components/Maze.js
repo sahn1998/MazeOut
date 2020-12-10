@@ -17,8 +17,6 @@ export class Maze extends React.Component {
         wallPoint: false,
         startCoord: null,
         endCoord: null,
-        openModal: false,
-        announcementMessage: "",
     }
 
     /**
