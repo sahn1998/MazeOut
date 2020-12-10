@@ -1,0 +1,27 @@
+What did you learn during this project?
+-> During this project, we learned about the process of creating and developing a web application
+while simultaneously incorporating many different programming and visualizing elements. We also
+learned how to work with ReactJS, as well as the methods to output different results
+based on a user’s input in a user-friendly way. In doing so, we were able to go beyond what
+we have learned in class and improve our abilities to realize a better design for the program
+and display diverse elements. 
+
+What did you enjoy during this project?
+-> We truly enjoyed every step of this project from brainstorming about what to build
+to constructing and developing a fully functioning web application from scratch. We had times
+when we faced obstacles and struggled to move forward, but once we got them sorted out, we were
+proud of our accomplishments and finished product. 
+
+What did you find challenging or frustrating during this project?
+-> We would say that our biggest challenge that we constantly encountered throughout the project
+was working with ReactJS because we did not have much experience and knowledge with it. 
+It was also challenging to figure out how to change the colors of each tile based on the 
+user’s choice, as well as how to implement working algorithms to solve the maze. 
+
+What did you find particularly helpful for your learning during this project?
+-> We found the materials we learned in class were helpful for most parts of our project.
+The concept of recursive backtracking was especially useful when implementing algorithms
+to solve the maze. It was also helpful to search and query many different websites and to watch
+relevant tutorials as they gave us not only lessons but also inspiration to think more deeply 
+and creatively. We also found it helpful to divide up the project into multiple stages and 
+write code accordingly in order to move forward efficiently and fix errors step-by-step.
