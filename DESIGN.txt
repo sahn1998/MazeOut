@@ -1,0 +1,33 @@
+For this particular project, we created a web application that visualizes a maze-solving algorithm
+contingent on a user’s input. Put simply, based on the user’s input into the size of the map,
+the starting and endpoints, and walls, our app displays a viable path from the starting point
+to the endpoint by traversing around the walls. We decided to make the process of solving a maze
+more user interactive by allowing them to witness how their different inputs can produce
+different outputs, rather than just generating our own mazes. In doing so, we employed ReactJS,
+a front-end Javascript library for building various UI components, to operate the front-end
+visualization as well as for server-side algorithm calculations. 
+
+By utilizing ReactJS and installing Node.js, we were able to create and design our web application
+using CSS and HTML. As a result, we managed to provide a connection to the localhost to view and
+interact with the maze in the browser when the app is run. In this way, we were also able to
+bypass the need to reload the page every time we made changes to the code as that part was
+automatically done. Additionally, through CSS, we could put the different elements in the positions
+that we wanted and design the layout of the app in a more organized and aesthetic way. 
+
+For the front-end aspect of the project, we gave users the ability to interact with the app
+as much as possible. In Game.js, we let users set the size of the maze to solve and start
+the program. In this stage, we incorporated a slide bar to provide a user-friendly and simple way
+for users to decide the size of the maze board. In Maze.js, for the tile components of Tile.js,
+we allowed users to set the starting and endpoints of the maze and place the walls inside the maze.
+To this end, we made buttons, each representing the starting point, endpoint, and walls, 
+that the users could choose from and made the color of the tiles change according to the 
+user's button selections. On top of this, we implemented the algorithm to solve the maze by 
+checking if the next point is a viable path at every move and labeling every visited tile as “v”.
+
+In order to improve the user-friendliness of the application, we added a button to reset the maze,
+so that the users could reconstruct the maze without reselecting each tile or having to
+refresh the web. We also disallowed users to choose multiple starting and endpoints as it would
+potentially create a dysfunctional maze. However, we allowed users to unselect tiles if they wished
+in order to rebuild the maze without having to rerun the program. By implementing the 
+above functions, we were able to successfully create a web application that conveyed our aim
+to create a maze-solving tool that is easy to use, yet fully functional. 
