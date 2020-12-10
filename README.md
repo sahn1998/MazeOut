@@ -1,5 +1,5 @@
 # MazeOut
-A Maze Solving Project
+[A Maze Solving Project](https://mazeout.herokuapp.com/)
 
 <br>
 
